@@ -20,7 +20,8 @@ export class Errorboundary extends Component {
     }
   render() {
    if(this.state.hasError)
-   return(<><h4>{this.props.num}, which is less than 5</h4>
+   return(<><h4>Something went wrong!</h4>
+   <details style={{cursor:'pointer'}}>{this.props.num}, which is less than 5</details>
    <button onClick={this.tryHandler}>try again</button></>)
    else return(this.props.children)
   }
